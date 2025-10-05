@@ -27,9 +27,8 @@ body {
 }
 
 .menu-container {
-  flex-grow: 1;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }
 
 .menu {
@@ -52,15 +51,16 @@ body {
   color: #dd43e6;
 }
 
-/* Botão hamburger escondido no desktop */
+/* Botão hamburger */
 .hamburger {
-  display: none;
+  display: none; 
   background: none;
   border: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
 }
+
 
 .centro {
   display: flex;
@@ -741,7 +741,7 @@ body {
   }
 
   .hamburger {
-    display: block;
+    display: block; /* mostra o botão */
     margin: 10px auto;
   }
 
@@ -756,6 +756,18 @@ body {
 
   .menu.show {
     display: flex; /* aparece ao clicar */
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 80px;
+  }
+
+  .menu li a {
+    font-size: 0.95rem;
+    padding: 8px 0;
+    display: block;
   }
 }
 
