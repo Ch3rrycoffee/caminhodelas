@@ -673,21 +673,20 @@ body {
     margin: 10px auto;
   }
 
-  /* Menu */
+ @media (max-width: 600px) {
   .menu {
-    display: none; /* escondido por padrão */
+    display: none; /* escondido */
     flex-direction: column;
     align-items: center;
-    gap: 8px; /* menor gap */
+    gap: 8px;
     text-align: center;
     width: 100%;
-    max-width: 250px; /* um pouco menor */
+    max-width: 250px;
     margin: 10px auto;
-    font-size: 0.95rem; /* um pouco menor */
   }
 
   .menu.show {
-    display: flex; /* mostrado quando clicado */
+    display: flex; /* aparece ao clicar */
   }
 
   .menu li a {
@@ -696,7 +695,7 @@ body {
     display: block;
     text-align: center;
   }
-
+}
   /* Carrossel */
   .carousel-container {
     padding: 20px 0;
@@ -752,5 +751,6 @@ body {
     height: auto;
   }
 }
+
 
 
