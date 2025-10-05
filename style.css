@@ -584,29 +584,39 @@ body {
 
 /* RESPONSIVIDADE */
 
-/* Tablet */
 @media (max-width: 992px) {
-  /* Cabeçalho */
+  
   .cabecalho {
     flex-direction: column;
     height: auto;
-    padding: 10px;
+    padding: 10px 20px;
   }
 
+  .hamburger {
+    display: block; 
+    margin: 10px auto;
+  }
 
+  .menu {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
 
+  .menu.show {
+    display: flex;
+  }
 
-
-
-
-
-  /* Carrossel */
+  
   .card.center {
     width: 240px;
     height: 340px;
   }
 
-  /* Sobre mim */
+
   .sobremim-texto {
     flex-direction: column;
     align-items: center;
@@ -623,7 +633,7 @@ body {
     margin: 0 auto;
   }
 
-  /* Rodapé */
+
   .rodape {
     flex-direction: column;
     justify-content: center;
@@ -631,7 +641,7 @@ body {
     text-align: center;
   }
 
-  /* Fotos das páginas */
+
   #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
     max-width: 90%;
     margin: 20px auto;
@@ -639,7 +649,7 @@ body {
   }
 }
 
-/* Celular */
+
 @media (max-width: 600px) {
   /* Cabeçalho */
   .cabecalho {
@@ -652,11 +662,9 @@ body {
     width: 80px;
   }
 
-
-
- @media (max-width: 600px) {
+ 
   .menu {
-    display: none; /* escondido */
+    display: none; 
     flex-direction: column;
     align-items: center;
     gap: 8px;
@@ -667,7 +675,7 @@ body {
   }
 
   .menu.show {
-    display: flex; /* aparece ao clicar */
+    display: flex; 
   }
 
   .menu li a {
@@ -676,8 +684,8 @@ body {
     display: block;
     text-align: center;
   }
-}
-  /* Carrossel */
+
+
   .carousel-container {
     padding: 20px 0;
   }
@@ -692,7 +700,7 @@ body {
     height: 300px;
   }
 
-  /* Títulos e textos */
+  
   h1, h2, h3, .titulo-sobre, .titulo-sobre2, .principais, .topicos, .sobre-criadora,
   .Rivalidade, .Feminina, .Relacionamento, .Ciclo, .Menstrual {
     font-size: 2rem;
@@ -706,10 +714,10 @@ body {
     text-align: justify;
   }
 
-  /* Sobre mim */
+ 
   #criadora {
     width: 150px;
-    margin: 20px auto 0 auto; /* centralizada após o texto */
+    margin: 20px auto 0 auto; 
     display: block;
   }
 
@@ -717,14 +725,13 @@ body {
     font-size: 0.95rem;
   }
 
-  /* Rodapé */
+
   .rodape {
     font-size: 14px;
     text-align: center;
     width: 100%;
   }
 
-  /* Fotos das páginas */
   #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
     width: 100%;
     max-width: 300px;
@@ -732,46 +739,6 @@ body {
     height: auto;
   }
 }
-
-@media (max-width: 992px) {
-  .cabecalho {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-  }
-
-  .hamburger {
-    display: block; /* mostra o botão */
-    margin: 10px auto;
-  }
-
-  .menu {
-    display: none; /* escondido por padrão */
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .menu.show {
-    display: flex; /* aparece ao clicar */
-  }
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 80px;
-  }
-
-  .menu li a {
-    font-size: 0.95rem;
-    padding: 8px 0;
-    display: block;
-  }
-}
-
-
 
 
 
