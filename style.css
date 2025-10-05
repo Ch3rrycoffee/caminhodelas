@@ -1,0 +1,715 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat;  
+  min-height: 100vh;
+}
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #7c3c7c;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: -20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.menu-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #dd43e6;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.minha-div {
+  background-color: rgb(194, 115, 192);
+  color: rgb(0, 0, 0);
+}
+
+.inicio {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.fundo-branco {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  font-size: 18px;
+  color: white;
+}
+
+.container {
+  background-color: #ffffff;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+}
+
+#Tópicos .container {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.coluna {
+  width: 200px;
+  text-align: center;
+}
+
+.ícone {
+  max-width: 100%;
+  height: auto;
+}
+
+.conteudo-principal {
+  padding-top: 130px; 
+}
+
+.conteudo-principal > div {
+  margin-bottom: 40px;
+}
+
+#topicos,
+#topicos h4,
+#topicos p {
+  color: #000;  
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.card {
+  transition: 
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.5s,
+    opacity 0.5s;
+  width: 180px;
+  height: 260px;
+  opacity: 0.7;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.card.center {
+  width: 280px;
+  height: 380px;
+  opacity: 1;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  z-index: 2;
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #7c3c7c;
+  background: rgba(255,255,255,0.85);
+  padding: 8px 0 4px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nav-arrow {
+  background: #aa52b6;
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrow.left {
+  left: 10px;
+}
+
+.nav-arrow.right {
+  right: 10px;
+}
+
+.nav-arrow:hover {
+  background: #7c3c7c;
+}
+
+.member-info {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.member-name {
+  margin-bottom: 0;
+}
+
+.member-name::before {
+  left: -120px;
+}
+
+.member-name::after {
+  right: -120px;
+}
+
+.member-role {
+  margin-top: 0;
+}
+
+
+
+
+/* Media query básica para tablets */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 4.5rem;
+  }
+
+  .card {
+    width: 200px;
+    height: 280px;
+  }
+
+  .member-name {
+    font-size: 2rem;
+  }
+
+  .member-role {
+    font-size: 1.2rem;
+  }
+
+  .member-name::before,
+  .member-name::after {
+    width: 50px;
+  }
+
+  .member-name::before {
+    left: -70px;
+  }
+
+  .member-name::after {
+    right: -70px;
+  }
+}
+
+/* ===== PARTE 3 ===== */
+/* Títulos e seções */
+.titulo-sobre {
+  font-family: 'Agbalumo', cursive;
+  font-size: 3rem;
+  color: #350f35;
+  text-align: center;
+  margin: 40px 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.titulo-sobre2 {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3rem;
+  color: #b058b0;
+  text-align: center;
+  margin: 0 0 40px 0;
+  letter-spacing: 2px;
+}
+
+.principais {
+  font-family: 'Agbalumo', cursive;
+  font-size: 3.5rem;
+  color: #481848;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.topicos {
+  font-family: 'Agbalumo', cursive;
+  font-size: 3.2rem;
+  color: #3d163d;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.topicos-info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.descricao {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.card-btn {
+  margin: 16px auto 0 auto;
+  display: inline-block;
+  padding: 10px 24px;
+  background: #aa52b6;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-btn:hover {
+  background: #7c3c7c;
+}
+
+.sobremim-texto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+.sobre-criadora {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3.5rem;
+  color: #691e69;
+  margin: 0;
+  letter-spacing: 2.3px;
+  font-size: 40px;
+  text-align: left;
+}
+
+.descricaojoanna {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+
+#criadora {
+  width: 250px;
+  height: auto;
+  margin-left: 60px;
+  box-shadow: #3a3a3a 0px 4px 8px;
+}
+
+/* Rodapé */
+.rodape  {
+  background-color: #7b4d7b;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.container-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* página Rivalidade Fem. */
+.titulo-topicos {
+  text-align: center;
+  margin: 40px auto 30px auto;
+  width: fit-content;
+  margin-top: 100px;
+}
+
+.Rivalidade {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3rem;
+  color: #3d113d;
+  letter-spacing: 6px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.Feminina {
+  font-family: 'Agbalumo', cursive;
+  font-size: 3.0rem;
+  color: #6d3475;
+  letter-spacing: 2px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.rivalidadefem {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+#foto-rivalidade {
+  display: block;
+  margin: 20px auto;
+  box-shadow: #3a3a3a 0px 4px 8px;
+  border-radius: 4px;
+  width: 500px;
+  height: auto;
+  align-items: center;
+}
+
+/*Relacionamento*/
+.titulo-topicos {
+  text-align: center;
+  margin: 40px auto 30px auto;
+  width: fit-content;
+  margin-top: 100px;
+}
+
+.Relacionamento {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3rem;
+  color: #5c1b5c;
+  letter-spacing: 6px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.relacionamento1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.relacionamento2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#foto-relacionamento1 {
+  display: block;
+  margin: 20px auto 100px auto;
+  box-shadow: #7f7f7f 0px 4px 8px;
+  border-radius: 4px;
+  width: 400px;
+  height: auto;
+  align-items: center;
+}
+
+.sinais {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 2.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.disque {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 2.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*Ciclo Menstrual */
+.titulo-topicos {
+  text-align: center;
+  margin: 40px auto 30px auto;
+  width: fit-content;
+  margin-top: 100px;
+}
+
+.Ciclo {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3rem;
+  color: #3d113d;
+  letter-spacing: 6px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.Menstrual {
+  font-family: 'Agbalumo', cursive;
+  font-size: 3.0rem;
+  color: #6d3475;
+  letter-spacing: 2px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.ciclomenstrual {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+#foto-ciclomenstrual {
+  display: block;
+  margin: 20px auto 100px auto;
+  box-shadow: #7f7f7f 0px 4px 8px;
+  border-radius: 4px;
+  width: 400px;
+  height: auto;
+  align-items: center;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  /* Cabeçalho */
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Conteúdo principal */
+  .conteudo-principal {
+    padding-top: 100px; 
+  }
+
+  /* Carrossel */
+  .card.center {
+    width: 240px;
+    height: 340px;
+  }
+
+  /* Sobre mim */
+  .sobremim-texto {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .descricaojoanna {
+    text-align: center;
+  }
+
+  #criadora {
+    width: 200px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Rodapé */
+  .rodape {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Fotos das páginas */
+  #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
+    max-width: 90%;
+    margin: 20px auto;
+    height: auto;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  /* Cabeçalho */
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+    padding: 8px 0;
+    display: block;
+    text-align: center;
+  }
+
+  /* Carrossel */
+  .carousel-container {
+    padding: 20px 0;
+  }
+
+  .card {
+    width: 150px;
+    height: 220px;
+  }
+
+  .card.center {
+    width: 220px;
+    height: 300px;
+  }
+
+  /* Títulos e textos */
+  h1, h2, h3, .titulo-sobre, .titulo-sobre2, .principais, .topicos, .sobre-criadora,
+  .Rivalidade, .Feminina, .Relacionamento, .Ciclo, .Menstrual {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .descricao, .descricaojoanna, .rivalidadefem, .relacionamento1, .relacionamento2,
+  .sinais, .disque, .ciclomenstrual {
+    font-size: 1rem;
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+  /* Sobre mim */
+  #criadora {
+    width: 150px;
+  }
+
+  .descricaojoanna {
+    font-size: 0.95rem;
+  }
+
+  /* Rodapé */
+  .rodape {
+    font-size: 14px;
+  }
+
+  /* Fotos das páginas */
+  #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    height: auto;
+  }
+}
