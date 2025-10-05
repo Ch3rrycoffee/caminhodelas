@@ -34,7 +34,7 @@ body {
 
 .menu {
   list-style: none;
-  display: flex; /* links aparecem normalmente no PC */
+  display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -52,15 +52,16 @@ body {
   color: #dd43e6;
 }
 
-/* BOTÃO HAMBURGER */
-.menuhamburger {
-  display: none; /* só aparece no tablet/celular */
-  font-size: 2rem;
+/* Botão hamburger escondido no desktop */
+.hamburger {
+  display: none;
   background: none;
   border: none;
-  cursor: pointer;
+  font-size: 2rem;
   color: white;
+  cursor: pointer;
 }
+
 .centro {
   display: flex;
   flex-direction: column;
@@ -592,25 +593,11 @@ body {
     padding: 10px;
   }
 
-.menuhamburger {
-  display: block; 
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 
-.menu {
-  display: none; 
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  margin-top: 10px;
-}
 
-.menu.show {
-  display: flex; 
-}
+
+
+
 
 
   /* Carrossel */
@@ -747,20 +734,28 @@ body {
 }
 
 @media (max-width: 992px) {
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 10px auto;
+  }
+
   .menu {
     display: none; /* escondido por padrão */
     flex-direction: column;
     gap: 10px;
     width: 100%;
     text-align: center;
+    margin-top: 10px;
   }
 
   .menu.show {
     display: flex; /* aparece ao clicar */
-  }
-
-  .menuhamburger {
-    display: block;
   }
 }
 
