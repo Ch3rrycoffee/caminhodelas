@@ -34,7 +34,7 @@ body {
 
 .menu {
   list-style: none;
-  display: flex;  /* padrão desktop */
+  display: flex;  
   flex-direction: row;
   gap: 30px;
   margin: 0;
@@ -43,7 +43,7 @@ body {
 }
 
 .menu.hide {
-  display: none !important;
+  display: none !important; 
 }
 
 .menuhamburger {
@@ -703,6 +703,7 @@ body {
     width: 100%;
   }
 }
+
 
 
 
