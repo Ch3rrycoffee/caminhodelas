@@ -26,23 +26,31 @@ body {
   height: auto;
 }
 
+.menuhamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
 .menu-container {
+  flex-grow: 1;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .menu {
   list-style: none;
-  display: none; 
+  display: flex; 
   flex-direction: row;
   gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-.menu.show {
-  display: flex; 
-}
 
 .menu li a {
   color: white;
@@ -56,14 +64,8 @@ body {
   color: #dd43e6;
 }
 
-
-.menuhamburger {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
+.menu.hide {
+  display: none !important;
 }
 
 
@@ -590,37 +592,16 @@ body {
 /* RESPONSIVIDADE */
 
 @media (max-width: 992px) {
-  
   .cabecalho {
     flex-direction: column;
     height: auto;
     padding: 10px 20px;
   }
 
-  .hamburger {
-    display: block; 
-    margin: 10px auto;
-  }
-
-  .menu {
-    display: none; 
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  
   .card.center {
     width: 240px;
     height: 340px;
   }
-
 
   .sobremim-texto {
     flex-direction: column;
@@ -638,25 +619,16 @@ body {
     margin: 0 auto;
   }
 
-
   .rodape {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-
-
-  #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
-    max-width: 90%;
-    margin: 20px auto;
-    height: auto;
-  }
 }
 
-
+/* Celulares */
 @media (max-width: 600px) {
-  /* Cabeçalho */
   .cabecalho {
     flex-direction: column;
     height: auto;
@@ -667,29 +639,18 @@ body {
     width: 80px;
   }
 
- 
   .menu {
-    display: none; 
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
     width: 100%;
-    max-width: 250px;
-    margin: 10px auto;
-  }
-
-  .menu.show {
-    display: flex; 
+    text-align: center;
+    gap: 8px;
   }
 
   .menu li a {
     font-size: 0.95rem;
     padding: 8px 0;
     display: block;
-    text-align: center;
   }
-
 
   .carousel-container {
     padding: 20px 0;
@@ -705,7 +666,7 @@ body {
     height: 300px;
   }
 
-  
+  /* Textos e títulos menores */
   h1, h2, h3, .titulo-sobre, .titulo-sobre2, .principais, .topicos, .sobre-criadora,
   .Rivalidade, .Feminina, .Relacionamento, .Ciclo, .Menstrual {
     font-size: 2rem;
@@ -719,10 +680,9 @@ body {
     text-align: justify;
   }
 
- 
   #criadora {
     width: 150px;
-    margin: 20px auto 0 auto; 
+    margin: 20px auto 0 auto;
     display: block;
   }
 
@@ -730,18 +690,10 @@ body {
     font-size: 0.95rem;
   }
 
-
   .rodape {
     font-size: 14px;
     text-align: center;
     width: 100%;
-  }
-
-  #foto-rivalidade, #foto-relacionamento1, #foto-ciclomenstrual {
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-    height: auto;
   }
 }
 
