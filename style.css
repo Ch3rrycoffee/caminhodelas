@@ -32,21 +32,8 @@ body {
   justify-content: flex-end;
 }
 
-.menu {
-  list-style: none;
-  display: flex;  
-  flex-direction: row;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-.menu.hide {
-  display: none !important; 
-}
-
 .menuhamburger {
+  display: none;
   background: none;
   border: none;
   font-size: 2rem;
@@ -54,8 +41,14 @@ body {
   cursor: pointer;
 }
 
-.menuhamburger {
-  display: block;
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
 
@@ -632,6 +625,19 @@ body {
     align-items: center;
     text-align: center;
   }
+
+
+  .menuhamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 8px;
+  }
 }
 
 /* Celulares */
@@ -646,7 +652,14 @@ body {
     width: 80px;
   }
 
+
+  .menuhamburger {
+    display: block;
+  }
+
+ 
   .menu {
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -673,7 +686,7 @@ body {
     height: 300px;
   }
 
-  /* Textos e títulos menores */
+
   h1, h2, h3, .titulo-sobre, .titulo-sobre2, .principais, .topicos, .sobre-criadora,
   .Rivalidade, .Feminina, .Relacionamento, .Ciclo, .Menstrual {
     font-size: 2rem;
@@ -703,6 +716,12 @@ body {
     width: 100%;
   }
 }
+
+
+.menuhamburger {
+  display: none;
+}
+
 
 
 
