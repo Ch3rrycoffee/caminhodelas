@@ -34,14 +34,10 @@ body {
 
 .menu {
   list-style: none;
-  display: flex; 
+  display: flex; /* links aparecem normalmente no PC */
   gap: 30px;
   margin: 0;
   padding: 0;
-}
-
-.menuhamburger {
-  display: none; 
 }
 
 .menu li a {
@@ -56,6 +52,15 @@ body {
   color: #dd43e6;
 }
 
+/* BOTÃO HAMBURGER */
+.menuhamburger {
+  display: none; /* só aparece no tablet/celular */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
 .centro {
   display: flex;
   flex-direction: column;
@@ -660,19 +665,7 @@ body {
     width: 80px;
   }
 
-  /* Botão hamburger */
-  .hamburger {
-    display: block;
-    background: #aa52b6;
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    margin: 10px auto;
-  }
+
 
  @media (max-width: 600px) {
   .menu {
@@ -752,6 +745,25 @@ body {
     height: auto;
   }
 }
+
+@media (max-width: 992px) {
+  .menu {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.show {
+    display: flex; /* aparece ao clicar */
+  }
+
+  .menuhamburger {
+    display: block;
+  }
+}
+
 
 
 
