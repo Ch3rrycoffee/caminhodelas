@@ -27,11 +27,13 @@ rightBtn.onclick = () => {
 updateCarousel();
 
 const hamburger = document.getElementById('hamburger');
-const menu = document.querySelector('.menu');
+const menu = document.getElementById('menu');
 
 hamburger.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
+
+
 
 
 
