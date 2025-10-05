@@ -26,16 +26,6 @@ body {
   height: auto;
 }
 
-.menuhamburger {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-
 .menu-container {
   flex-grow: 1;
   display: flex;
@@ -44,11 +34,28 @@ body {
 
 .menu {
   list-style: none;
-  display: flex; 
+  display: flex;  /* padrão desktop */
   flex-direction: row;
   gap: 30px;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
+}
+
+.menu.hide {
+  display: none !important;
+}
+
+.menuhamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menuhamburger {
+  display: block;
 }
 
 
@@ -696,6 +703,7 @@ body {
     width: 100%;
   }
 }
+
 
 
 
