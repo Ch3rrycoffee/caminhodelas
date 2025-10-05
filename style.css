@@ -34,11 +34,15 @@ body {
 
 .menuhamburger {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.menuhamburger.show {
+  display: flex;
 }
 
 .menu {
@@ -655,36 +659,39 @@ body {
     width: 80px;
   }
 
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    max-width: 300px;
+  /* Botão hamburger */
+  .hamburger {
+    display: block;
+    background: #aa52b6;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
     margin: 10px auto;
   }
 
-  @media (max-width: 768px) {
-  .menuhamburger {
-    display: block;
-  }
-
+  /* Menu */
   .menu {
     display: none; /* escondido por padrão */
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 8px; /* menor gap */
     text-align: center;
     width: 100%;
-    margin-top: 10px;
+    max-width: 250px; /* um pouco menor */
+    margin: 10px auto;
+    font-size: 0.95rem; /* um pouco menor */
   }
 
   .menu.show {
     display: flex; /* mostrado quando clicado */
   }
-}
 
   .menu li a {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 8px 0;
     display: block;
     text-align: center;
@@ -722,6 +729,8 @@ body {
   /* Sobre mim */
   #criadora {
     width: 150px;
+    margin: 20px auto 0 auto; /* centralizada após o texto */
+    display: block;
   }
 
   .descricaojoanna {
@@ -731,6 +740,8 @@ body {
   /* Rodapé */
   .rodape {
     font-size: 14px;
+    text-align: center;
+    width: 100%;
   }
 
   /* Fotos das páginas */
@@ -741,4 +752,5 @@ body {
     height: auto;
   }
 }
+
 
